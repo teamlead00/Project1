@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="CRM Test Suite">
+	<listeners>
+		<listener class-name="CRM.Utils.ReportListener" />
+	</listeners>
+	<test thread-count="1" name="Login-Tests" parallel="classes">
+		<groups>
+			<run>
+				<exclude name="broken" />
+			</run>
+		</groups>
+		<classes>
+			<class
+				name="CRM.Tests.UserLogin.U_Login.LoginToUserWithValidData" />
+		</classes>
+	</test> <!-- M_Login-Tests -->
+	<test thread-count="1" name="MemberCase-Tests" parallel="classes">
+		<groups>
+			<run>
+				<exclude name="broken" />
+			</run>
+		</groups>
+		<classes>
+			<class name="CRM.Tests.UserLogin.U_MemberCase.AddEnquiry" />
+		</classes>
+	</test> <!-- S_MemberCase-Tests -->
+	<test thread-count="1" name="MemberProfile-Tests"
+		parallel="classes">
+		<groups>
+			<run>
+				<exclude name="broken" />
+			</run>
+		</groups>
+		<classes>
+			<class
+				name="CRM.Tests.UserLogin.U_MemberProfile.AdministrativeNotes" />
+		</classes>
+	</test> <!-- S_MemberProfile-Tests -->
+</suite> <!-- CRM Test Suite -->

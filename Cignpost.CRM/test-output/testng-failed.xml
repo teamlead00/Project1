@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [CRM Test Suite]">
+  <listeners>
+    <listener class-name="CRM.Utils.ReportListener"/>
+  </listeners>
+  <test name="MemberCase-Tests(failed)" parallel="classes">
+    <groups>
+      <run>
+        <exclude name="broken"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="AddEnquiry">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="verifyAddEnquiry"/>
+          <include name="afterMethod"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- AddEnquiry -->
+    </classes>
+  </test> <!-- S_MemberCase-Tests(failed) -->
+</suite> <!-- Failed suite [CRM Test Suite] -->
